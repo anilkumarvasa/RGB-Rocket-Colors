@@ -1,0 +1,105 @@
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#heading{
+  color:rgb(115, 203, 217);
+  text-align: center;
+  text-shadow: 3px 3px 5px black,5px 5px 3px blue,5px 5px 2px navy;
+  font-size: 50px;
+  font-weight: 600;
+  background-color: bisque;
+}
+.parent{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+#child1{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0 0 10px;
+  row-gap: 10px;
+  
+}
+#text{
+  height: 350px;
+  width: 350px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+}
+#download-btn{
+  height: 45px;
+  padding: 2px 5px 2px 5px;
+  width: fit content;
+  border: none;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: rgb(241, 105, 14);
+  border-radius: 10px;
+
+}
+#child2{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#red{
+  height:45px;
+  width: 45px;
+  background-color: red;
+  cursor: pointer;
+}
+#green{
+  height:45px;
+  width: 45px;
+  background-color: green;
+  cursor: pointer;
+}
+#blue{
+  height:45px;
+  width: 45px;
+  background-color: blue;
+  cursor: pointer;
+
+}
+#yellow{
+  height:45px;
+  width: 45px;
+  background-color: yellow;
+  cursor: pointer;
+}
+#purple{
+  height:45px;
+  width: 45px;
+  background-color: purple;
+  cursor: pointer;
+}
+#white{
+  height:45px;
+  width: 45px;
+  background-color: white;
+  cursor: pointer;
+}
+#text-color-names{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 7px;
+  border: none;
+}
+#sub-heading{
+  font-size: 30px;
+  color:blueviolet;
+}
+#font-family{
+  display: flex;
+  column-gap: 8px;
+
+}

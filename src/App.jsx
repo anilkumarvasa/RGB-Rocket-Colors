@@ -1,17 +1,31 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './App.css'
+import screenshot from 'html2canvas'
 
 function App() {
   const[tcolor,setTcolor] = useState('000')
   const[bgcol,setBgcol] = useState('000')
+  const image = useRef()
   const textColor = (colorName) =>{
-    document.getElementById('text').style.color=colorName
+    image.current.style.color=colorName
   }
   const bgColor = (colorName) =>{
-    document.getElementById('text').style.backgroundColor=colorName
+    image.current.style.backgroundColor=colorName
   }
   const fontFamily = (fontName) => {
-    document.getElementById('text').style.fontFamily=fontName
+   image.current.style.fontFamily=fontName
+  }
+
+  const downloadImage = () => {
+    screenshot(image.current).then(canvas => {
+    const imageData = canvas.toDataURL('image/png')
+    const link = document.createElement('a')
+    link.href=imageData
+    link.download = 'RGB.png'
+    link.click()
+});
+
+
   }
 
   return (
@@ -21,8 +35,8 @@ function App() {
       </div> 
        <div className='parent'>
          <div id='child1'>
-          <h1 contentEditable='true' id='text'>Write your text........</h1>
-          <button id="download-btn">Download</button>
+          <h1  ref={image} contentEditable='true' id='text'>Write your text........</h1>
+          <button id="download-btn" onClick={downloadImage}>Download</button>
          </div>
          <div id='child2'>
           <div id='text-color'>

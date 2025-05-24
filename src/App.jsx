@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 function App() {
-
+  const[tcolor,setTcolor] = useState('000')
+  const[bgcol,setBgcol] = useState('000')
   const textColor = (colorName) =>{
     document.getElementById('text').style.color=colorName
   }
   const bgColor = (colorName) =>{
     document.getElementById('text').style.backgroundColor=colorName
   }
-  const fontFamily = (fonts) => {
-    document.getElementById('text').style.fontFamily=fonts
+  const fontFamily = (fontName) => {
+    document.getElementById('text').style.fontFamily=fontName
   }
 
   return (
@@ -33,7 +34,12 @@ function App() {
               <button id="yellow"onClick={()=>{textColor('yellow')}}></button>
               <button id="purple"onClick={()=>{textColor('purple')}}></button>
               <button id="white" onClick={()=>{textColor('white')}}></button>
-              <input type='color'/>
+              <input id='all' type='color' value={tcolor} 
+              onChange={(e)=>{
+                setTcolor(e.target.value)
+                textColor(e.target.value)
+              }}
+              />
             </div>
           </div>
           <div id='bg-color'>
@@ -45,18 +51,21 @@ function App() {
                <button id="yellow" onClick={()=>{bgColor('yellow')}}></button>
                <button id="purple" onClick={()=>{bgColor('purple')}}></button>
                <button id="white" onClick={()=>{bgColor('white')}}></button>
-               <input type='color'/>
+               <input  id='all'type='color' value={bgcol} 
+              onChange={(e)=>{
+                setBgcol(e.target.value)
+                bgColor(e.target.value)
+              }}
+              />
               </div>
           </div>
           <div id='fonts'>
-            <h1 id='sub-heading'>Choose your fonts</h1>
-             <div id='font-family'>
               <h1 id='times-new' onClick={()=>{fontFamily('times-new')}}>Hello</h1>
               <h1 id='cursive'onClick={()=>{fontFamily('cursive')}}>Hello</h1>
               <h1 id='verdana'onClick={()=>{fontFamily('verdana')}}>Hello</h1>
               <h1 id='arial'onClick={()=>{fontFamily('arial')}}>Hello</h1>
               <h1 id='impact'onClick={()=>{fontFamily('impact')}}>Hello</h1>
-             </div>
+             
 
           </div>
          </div>

@@ -10,12 +10,20 @@
   font-size: 50px;
   font-weight: 600;
   background-color: bisque;
+  transition: transform 0.3s;
+}
+#heading:hover{
+  transform: scale(1.5);
+  color: rgb(242, 87, 196);
+  background-color: aliceblue;
 }
 .parent{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  border: 7px solid orange;
+  padding: 10px 0 10px 0;
 
 }
 #child1{
@@ -29,12 +37,16 @@
   
 }
 #text{
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   border: 1px solid black;
   text-align: center;
   vertical-align: middle;
   border-radius: 20px;
+  transition: transform 0.3s;
+}
+#text:hover{
+  transform: scale(1.1);
 }
 #download-btn{
   height: 45px;
@@ -45,49 +57,86 @@
   font-weight: 600;
   background-color: rgb(241, 105, 14);
   border-radius: 10px;
+  transition: transform 0.3s;
 
+}
+#download-btn:hover{
+  transform: scale(1.1) ;
+  background-color: blue;
+  color: white;
 }
 #child2{
   justify-content: center;
   flex-wrap: wrap;
 }
+
 #red{
   height:45px;
   width: 45px;
   background-color: red;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+#red:hover{
+  transform: scale(1.2);
 }
 #green{
   height:45px;
   width: 45px;
   background-color: green;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+#green:hover{
+  transform: scale(1.2);
 }
 #blue{
   height:45px;
   width: 45px;
   background-color: blue;
   cursor: pointer;
-
+  transition: transform 0.3s;
+}
+#blue:hover{
+  transform: scale(1.2);
 }
 #yellow{
   height:45px;
   width: 45px;
   background-color: yellow;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+#yellow:hover{
+  transform: scale(1.2);
 }
 #purple{
   height:45px;
   width: 45px;
   background-color: purple;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+#purple:hover{
+  transform: scale(1.2);
 }
 #white{
   height:45px;
   width: 45px;
   background-color: white;
   cursor: pointer;
+  transition: transform 0.3s;
 }
+#white:hover{
+  transform: scale(1.2);
+}
+#all{
+  transition: transform 0.3s;
+}
+#all:hover{
+  transform: scale(1.3);
+}
+
 #text-color-names{
   display: flex;
   flex-wrap: wrap;
@@ -95,11 +144,44 @@
   border: none;
 }
 #sub-heading{
-  font-size: 30px;
+  font-size: 20px;
   color:blueviolet;
 }
-#font-family{
+#fonts{
   display: flex;
-  column-gap: 8px;
-
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+  column-gap: 10px;
+}
+#times-new{
+  font-family: 'Times New Roman', Times, serif;
+  border: 1.3px dotted red;
+  cursor: pointer;
+}
+#cursive{
+  font-family: 'Courier New', Courier, monospace;
+  border: 1.3px dashed red;
+  cursor: pointer;
+}
+#verdana{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1.3px double red;
+  cursor: pointer;
+}
+#arial{
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1.3px dashed red;
+  cursor: pointer;
+}
+#impact{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 1.3px dotted red;
+  cursor: pointer;
+}
+#times-new:hover, #cursive:hover, #verdana:hover,  #arial:hover, #impact:hover{
+  transition: transform 0.3s;
+}
+#times-new:hover, #cursive:hover, #verdana:hover,  #arial:hover, #impact:hover{
+ transform:scale(1.2);
 }
